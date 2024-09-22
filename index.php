@@ -1,8 +1,29 @@
 <?php
+session_start();
 require_once(__DIR__.'./src/models/Pages.php');
+require_once(__DIR__.'/src/controllers/Test.php');
+
+$test = new Test;
 $page = new Pages;
 
-if(!isset($_GET['action'])){
+if(!isset($_SESSION['LOGGED_USER'])){
+    if(isset($_GET['connect']) && $_GET['connect']==='adduser'){
+        $pageDisplay = $page->addUserPage();
+        return;
+    }else{
+        $pageDisplay=$page->loginPage();
+        return;
+    }
+}
+
+if(isset($_GET['id'])){
+    if($test->testId($_GET['id'])){
+        $pageDisplay = $page->book();
+    }else{
+        $pageDisplay = $page->errorPage('ce livre n\'existe pas');
+    }
+    
+}elseif(!isset($_GET['action'])){
     $pageDisplay = $page->homePage();
 } else{
     switch ($_GET['action']) {

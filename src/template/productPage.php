@@ -1,5 +1,5 @@
 <?php 
-require_once(dirname(__DIR__,1).'/models/Book.php');
+require_once(dirname(__DIR__,1).'/models/Books.php');
 $bookitem = new Books;
 $books = $bookitem->getBooks();
 
@@ -23,7 +23,7 @@ ob_start();?>
                         </ul>
                     </div>
                     <div class="px-6 py-4">
-                        <a href=# class="px-3 py-4 bg-gray-200 rounded-2xl absolute bottom-4">En savoir plus</a>
+                        <a href='index.php?id=<?=$book['id']?>' class="px-3 py-4 bg-gray-200 rounded-2xl absolute bottom-4">En savoir plus</a>
                     </div>
                 </article>
             <?php endforeach; ?>

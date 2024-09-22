@@ -11,4 +11,15 @@ class Books{
         $books = $getBooks->fetchAll();
         return $books;
     }
+
+    public function getBook($id) : array
+    {
+        $dbc = new Model;
+        $mysqlClient =$dbc->dbConnect();
+        $getBook = $mysqlClient-> prepare('SELECT * FROM books where id=:id');
+        $getBook->execute([
+            'id'=>$id,
+        ]);
+        return $getBook->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

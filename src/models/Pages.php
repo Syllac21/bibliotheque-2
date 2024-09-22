@@ -1,5 +1,13 @@
 <?php
 class Pages{
+    public function loginPage(){
+        require_once(dirname(__DIR__,1).'../template/login.php');
+    }
+
+    public function addUserPage(){
+        require_once(dirname(__DIR__,2).'/src/template/addUserPage.php');
+    }
+
     public function homepage()
     {
         require_once(dirname(__DIR__,1).'../template/homePage.php');
@@ -13,6 +21,11 @@ class Pages{
     public function contact()
     {
         require_once(dirname(__DIR__,1).'../template/contact.php');
+    }
+
+    public function book()
+    {
+        require_once(dirname(__DIR__,1).'../template/book.php');
     }
 
     public function errorPage($error)
