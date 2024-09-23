@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <header class="bg-gray-600 bg-opacity-40">
+    <header>
         <h1 class="text-4xl font-bold text-white text-center">Le portail galactique</h1>
            
-        <div class="container mx-auto ">
+        <div class="container mx-auto">
             
             <div class="relative flex flex-col items-center justify-between w-full group py-7 shrink-0">
                 <div class="bg-opacity-70 mb-5 items-center justify-between hidden gap-12 text-white md:flex">
-                    <a class="text-sm font-normal hover:text-teal-50" href="/index.php">Accueil</a>
-                    <a class="text-sm font-normal hover:text-teal-50" href="/index.php?action=produits">Produits</a>
-                    <a class="text-sm font-normal hover:text-teal-50" href="/index.php?action=contact">Contact</a>
+                    <a class="text-2xl font-normal hover:text-teal-50" href="/index.php">Accueil</a>
+                    <a class="text-2xl font-normal hover:text-teal-50" href="/index.php?action=produits">Produits</a>
+                    <a class="text-2xl font-normal hover:text-teal-50" href="/index.php?action=contact">Contact</a>
+                    <a class="text-2xl font-normal hover:text-teal-50" href="/index.php?action=logout">Se déconnecter</a>
                 </div>
                 <button onclick="(() => { this.closest('.group').classList.toggle('open')})()" class="flex md:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -20,6 +21,7 @@
                     <a class="text-sm font-normal hover:text-teal-50" href="/index.php">Accueil</a>
                     <a class="text-sm font-normal hover:text-teal-50" href="/index.php?action=produits">Produits</a>
                     <a class="text-sm font-normal hover:text-teal-50" href="/index.php?action=contact">Contact</a>
+                    <a class="text-sm font-normal hover:text-teal-50" href="/index.php?action=logout">Se déconnecter</a>
                 </div>
             </div>
         </div>

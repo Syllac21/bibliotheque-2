@@ -1,5 +1,6 @@
 <?php
-require_once(__DIR__.'../../src/models/Pages.php');
+require_once(dirname(__DIR__,2).'/src/models/Pages.php');
+
 $title = 'Nouveau compte';
 $page = new Pages;
 $_SESSION['token'] = md5(uniqid(mt_rand(), true));
@@ -7,13 +8,13 @@ $_SESSION['token'] = md5(uniqid(mt_rand(), true));
 ob_start();
 ?>
 <header>
-    <h1 class="text-center text-5xl py-5 bg-teal-600">Le portail Galactique</h1>
+    <h1 class="text-center text-5xl py-5">Le portail Galactique</h1>
     
 </header>
 <body>
     <main class="container mx-auto my-10 p-5">
         <h2 class="text-center font-semibold leading-7 text-gray-300 text-2xl">Nouveau compte</h2>
-        <form action="./src/controllers/addUserc*Controller.php" method="POST" class="mt-2 px-5 mx-auto w-1/2 flex flex-col justify-center">
+        <form action="/src/controllers/addUserController.php" method="POST" class="mt-2 px-5 mx-auto w-1/2 flex flex-col justify-center">
             <input type="hidden" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
             <div class="border-b border-gray-900/10 pb-12">
 
@@ -52,7 +53,7 @@ ob_start();
             </div>            
         
 
-            < class="mt-6 flex items-center justify-end gap-x-6">
+            <div class="mt-6 flex items-center justify-end gap-x-6">
                 <a href="../index.php" class="text-teal-200 hover:text-teal-50">Annuler</a>
                 <button type="submit" class="rounded-md bg-teal-950 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Envoyer</button>
                 

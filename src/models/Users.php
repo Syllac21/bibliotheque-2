@@ -27,4 +27,12 @@ class Users
             'role' =>$role,
         ]);
     }
+
+    public function logout()
+    {
+        $page = new Pages;
+        session_unset();
+        session_destroy();
+        $pageDisplay = $page->homepage();
+    }
     }

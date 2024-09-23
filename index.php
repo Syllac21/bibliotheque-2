@@ -2,9 +2,11 @@
 session_start();
 require_once(__DIR__.'./src/models/Pages.php');
 require_once(__DIR__.'/src/controllers/Test.php');
+require_once(__DIR__.'/src/models/Users.php');
 
 $test = new Test;
 $page = new Pages;
+$user = new Users;
 
 if(!isset($_SESSION['LOGGED_USER'])){
     if(isset($_GET['connect']) && $_GET['connect']==='adduser'){
@@ -34,7 +36,10 @@ if(isset($_GET['id'])){
         case 'contact' :
             $pageDisplay = $page->contact();
             break;
-
+        
+        case 'logout' :
+            $user->logout();
+            exit;
         default:
             include '/src/template/productPage.php';
             break;
