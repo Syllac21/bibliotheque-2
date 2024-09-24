@@ -4,7 +4,7 @@ ob_start();?>
 
 
 
-<div class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-4">
+<main class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-4">
          
     <img src="/src/images/accueil.webp" alt="Image d'accueil" class="w-full h-auto object-cover rounded-lg shadow-lg">
             
@@ -15,7 +15,7 @@ ob_start();?>
         <p class="text-lg text-center md:text-left"><span>L'aventure commence maintenant !</span></p>
     </div>
     
-</div>
+</main>
 
 
 <?php

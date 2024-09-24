@@ -4,15 +4,12 @@ $title = 'connexion';
 ob_start(); 
 $page = new Pages;
 ?>
-<header>
-    <h1 class="text-center text-5xl py-5">Le portail Galactique</h1>
-</header>
-<body>
+
     <main class="container mx auto px-4 md:px-0 my-10">
-        <div class="flex min-h-full flex col justify-center px-6 py-12 lg:px-8 bg-fixed bg-cover bg-center h-screen">
+        <div class="flex min-h-full flex col justify-center px-6 py-12 lg:px-8">
             <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                 
-                <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Connectez vous à votre compte</h2>
+                <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-300">Connectez vous à votre compte</h2>
             </div>
             <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                 <!-- formulaire -->
@@ -53,7 +50,7 @@ $page = new Pages;
             </div>
         </div>
     </main>
-</body>
+
 <?php
 $content = ob_get_clean();
 

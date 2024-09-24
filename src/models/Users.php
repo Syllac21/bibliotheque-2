@@ -33,6 +33,7 @@ class Users
         $page = new Pages;
         session_unset();
         session_destroy();
-        $pageDisplay = $page->homepage();
+        header('location: /');
+        exit;
     }
     }

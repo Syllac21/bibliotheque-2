@@ -7,10 +7,15 @@
             
             <div class="relative flex flex-col items-center justify-between w-full group py-7 shrink-0">
                 <div class="bg-opacity-70 mb-5 items-center justify-between hidden gap-12 text-white md:flex">
-                    <a class="text-2xl font-normal hover:text-teal-50" href="/index.php">Accueil</a>
-                    <a class="text-2xl font-normal hover:text-teal-50" href="/index.php?action=produits">Produits</a>
-                    <a class="text-2xl font-normal hover:text-teal-50" href="/index.php?action=contact">Contact</a>
-                    <a class="text-2xl font-normal hover:text-teal-50" href="/index.php?action=logout">Se déconnecter</a>
+                    <?php if(isset($_SESSION['LOGGED_USER'])) : ?>
+                        <a class="text-2xl font-normal hover:text-teal-50 hover:opacity-60 hover:underline" href="/index.php">Accueil</a>
+                        <a class="text-2xl font-normal hover:text-teal-50 hover:opacity-60 hover:underline" href="/index.php?action=produits">Produits</a>
+                        <a class="text-2xl font-normal hover:text-teal-50 hover:opacity-60 hover:underline" href="/index.php?action=contact">Contact</a>
+                        <?php if(isset($_SESSION['LOGGED_USER']) && $_SESSION['LOGGED_USER']['role'] != 'lecteur') : ?>
+                            <a class="text-2xl font-normal hover:opacity-60 hover:underline" href="#">Nouveau livre</a>
+                        <?php endif; ?>
+                        <a class="text-2xl font-normal hover:opacity-60 hover:underline" href="/index.php?action=logout">Se déconnecter</a>
+                    <?php endif; ?>
                 </div>
                 <button onclick="(() => { this.closest('.group').classList.toggle('open')})()" class="flex md:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

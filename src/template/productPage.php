@@ -13,16 +13,17 @@ ob_start();?>
                     
                     <img class="w-full h-52" src="/src/images/<?=$book['image'] ?>.jpg" alt="image de <?= $book['title'] ?>" />
                     
-                    <div class="px-6 py-4">
+                    <div class="px-6 py-4 mb-10">
                         <h2 class="text-2xl mb-2 text-gray-200"><?= $book['title'] ?></h2>
                         <ul>
                             
                             <li><?=$book['autor'] ?></li>
                             <li><?=$book['category']?></li>
+                            <li class="no-undreline hover:underline text-white"><?=$book['serie']?> </li>
                         </ul>
                     </div>
                     <div class="px-6 py-4">
-                        <a href='index.php?id=<?=$book['id']?>' class="px-3 py-4 bg-gray-200 rounded-2xl absolute bottom-4">En savoir plus</a>
+                        <a href='index.php?id=<?=$book['id']?>' class="px-3 py-4 bg-gray-200 rounded-2xl absolute bottom-0">En savoir plus</a>
                     </div>
                 </article>
             <?php endforeach; ?>
