@@ -1,8 +1,8 @@
 <?php 
 $title = 'Contact';
 ob_start();?>
-<body class="bg-gray-900 text-white">
-    <form action="/src/controllers/contactController.php" method="POST" class="mx-auto px-5 w-1/2 flex flex-col justify-center bg-gray-700" enctype="multipart/form-data">
+<body class="text-white">
+    <form action="/src/controllers/contactController.php" method="POST" class="mx-auto px-5 w-1/2 flex flex-col justify-center bg-gray-700 backdrop-blur-md bg-opacity-30" enctype="multipart/form-data">
         <div class="space-y-12">
             
             <div class="border-b border-gray-900/10 pb-3">
