@@ -18,6 +18,7 @@ class Users
     {
         $dbc = new Model;
         $mysqlClient = $dbc->dbConnect();
+        
         $addUser = $mysqlClient->prepare('INSERT INTO users(firstname, lastname, email, password, role) VALUES (:firstname, :lastname, :email, :password, :role)');
         return $addUser->execute([
             'firstname'=>$firstname,

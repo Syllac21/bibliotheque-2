@@ -28,6 +28,11 @@ class Pages{
         require_once(dirname(__DIR__,1).'../template/book.php');
     }
 
+    public function newBook()
+    {
+        require_once(dirname(__DIR__,1).'../template/addBook.php');
+    }
+
     public function errorPage($error)
     {
         require_once(dirname(__DIR__,1).'../template/errorPage.php');

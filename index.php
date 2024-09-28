@@ -39,9 +39,18 @@ if(isset($_GET['id'])){
         
         case 'logout' :
             $user->logout();
-            exit;
+            break;
+        
+        case 'newBook' :
+            $pageDisplay = $page->newBook();
+            break;
+
+        case 'error' :
+            $pageDisplay = $page->errorPage('une erreur s\'est produite');
+            break;
+
         default:
-            include '/src/template/productPage.php';
+            header('location: /');
             break;
     
     }

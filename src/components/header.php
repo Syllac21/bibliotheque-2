@@ -12,7 +12,7 @@
                         <a class="text-2xl font-normal hover:text-teal-50 hover:opacity-60 hover:underline" href="/index.php?action=produits">Produits</a>
                         <a class="text-2xl font-normal hover:text-teal-50 hover:opacity-60 hover:underline" href="/index.php?action=contact">Contact</a>
                         <?php if(isset($_SESSION['LOGGED_USER']) && $_SESSION['LOGGED_USER']['role'] != 'lecteur') : ?>
-                            <a class="text-2xl font-normal hover:opacity-60 hover:underline" href="#">Nouveau livre</a>
+                            <a class="text-2xl font-normal hover:opacity-60 hover:underline" href="/index.php?action=newBook">Nouveau livre</a>
                         <?php endif; ?>
                         <a class="text-2xl font-normal hover:opacity-60 hover:underline" href="/index.php?action=logout">Se déconnecter</a>
                     <?php endif; ?>
@@ -28,7 +28,7 @@
                         <a class="text-2xl font-normal hover:text-teal-50 hover:opacity-60 hover:underline" href="/index.php?action=produits">Produits</a>
                         <a class="text-2xl font-normal hover:text-teal-50 hover:opacity-60 hover:underline" href="/index.php?action=contact">Contact</a>
                         <?php if(isset($_SESSION['LOGGED_USER']) && $_SESSION['LOGGED_USER']['role'] != 'lecteur') : ?>
-                            <a class="text-2xl font-normal hover:opacity-60 hover:underline" href="#">Nouveau livre</a>
+                            <a class="text-2xl font-normal hover:opacity-60 hover:underline" href="/index.php?action=newBook">Nouveau livre</a>
                         <?php endif; ?>
                         <a class="text-2xl font-normal hover:opacity-60 hover:underline" href="/index.php?action=logout">Se déconnecter</a>
                     <?php endif; ?>
